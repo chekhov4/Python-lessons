@@ -1,11 +1,12 @@
-def biggest_mult(n):
-    fyb = [0,1]
+def find_fyb_n(n):
+    n_0 = 0
+    n_1 = 1
 
-    for i in range(2, n):
-       ch = fyb[i-1] + fyb[i-2]
-       fyb.append(ch)
+    for i in range(2, n+1):
+ #      ch = fyb[i-1] + fyb[i-2]  # if neccessary to store all Fibonachi numbers
+ #      fyb.append(ch)
+        fyb_n = n_0  + n_1
+        n_0 = n_1
+        n_1 = fyb_n
 
-    print (fyb[n])
-    return fyb[n]
-
-biggest_mult(7)
+    return fyb_n
