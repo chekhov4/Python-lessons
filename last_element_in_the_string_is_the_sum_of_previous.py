@@ -7,20 +7,20 @@ def create_random_array(n, m):
 
     return random_array
 
-def get_uniue_values_from_array(n, m):
 
+def write_row_sum_of_array(n, m):
     get_array = create_random_array(n, m)
     all_values = []
     summ = 0
-    
-    for i in range(len(get_array)):       # detecting size of M
-        for j in range(len(get_array[i])-1): # detecting size on N
+
+    for i in range(len(get_array)):  # detecting size of M
+        for j in range(len(get_array[i]) - 1):  # detecting size on N
             summ += get_array[i][j]
-        get_array[i][j+1] = summ
+        get_array[i][j + 1] = summ
         summ = 0
 
     print(get_array)
 
-if __name__ == '__main__':
 
-    get_uniue_values_from_array(3,3)
+if __name__ == '__main__':
+    write_row_sum_of_array(3, 3)
