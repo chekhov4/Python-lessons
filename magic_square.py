@@ -27,7 +27,7 @@ def check_magic_square():
     get_square = create_random_array(3, 3, False)
 
     if check_unique_values_in_array(get_square) == False:
-        return 'no magic in square. not unique items'
+        return 'no magic in the square. not unique items'
 
     magic_number = len(get_square)*(len(get_square)**2 + 1) / 2
     temp_sum_row = 0
@@ -38,7 +38,7 @@ def check_magic_square():
             temp_sum_row += get_square[i][j]
             temp_sum_col += get_square[j][i]
         if temp_sum_row != magic_number:
-            return 'no magic in square. wrong sum in row'
+            return 'no magic in the square. wrong sum in row'
         elif temp_sum_col != magic_number:
             return 'no magic in square. wrong sum in column'
         else:
@@ -46,7 +46,7 @@ def check_magic_square():
             temp_sum_col = 0
         sum_diagonal += get_square[i][i]
     if sum_diagonal != magic_number:
-        return 'no magic in square. wrong diagonal'
+        return 'no magic in the square. wrong diagonal sum'
     else:
         return 'Holy magic in the square!!!'
 
