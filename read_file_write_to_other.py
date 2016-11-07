@@ -1,6 +1,6 @@
 def sort_file_strings(source_path, target_path):
     try:
-        s_file = open(file_path, 'r+')
+        s_file = open((source_path, 'r+')
     except IOError:
         print('File cannot be opened')
         return
