@@ -18,10 +18,7 @@ def sort_file_strings(source_path, target_path):
         t_file.writelines(file_strings[i])
     t_file.close()
 
-
-
 if __name__ == '__main__':
-
     file_path = 'c:\\temp\\test.txt'
     target_path = 'c:\\temp\\target.txt'
     sort_file_strings(file_path, target_path)
