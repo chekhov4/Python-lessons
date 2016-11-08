@@ -14,7 +14,7 @@ def wrapper(func):
             print('Template is empty')
             return 'Template is empty'
 
-        if all not in ['0','1']:
+        if replace_all not in ['0','1']:
             print('Wrong substitution type')
             return 'Wrong substitution type'
 
@@ -25,7 +25,7 @@ def wrapper(func):
 
 
 @wrapper
-def subst_string(source_string, bracket_type, template, all):
+def subst_string(source_string, bracket_type, template, replace_all):
     result_string =''
     i = 0
     while i < len(source_string):
@@ -35,7 +35,7 @@ def subst_string(source_string, bracket_type, template, all):
             while source_string[y] != bracket_type[1]:
                 y += 1
 
-            if all == '1':
+            if replace_all == '1':
                 result_string += bracket_type[0] + template + bracket_type [1]
                 i = y + 1
                 continue
@@ -56,13 +56,10 @@ if __name__ == '__main__':
     source_string = raw_input('Input string ')
     bracket_type = raw_input('Input bracket type (), {}, []')
     template = raw_input('Inpunt substitution ')
-    all = raw_input('Input replacement type 0 - the fist mach, 1 - all ')
-    #source_string = 'shjhgkjfhgjk (cska) askjg kf (fsdfsd) sfs'
-    #bracket_type = '()'
-    #template = 'fcsm'
-    #all = 4
+    replace_all = raw_input('Input replacement type 0 - the fist mach, 1 - all ')
+  
 
-    print(subst_string(source_string, bracket_type, template, all))
+    print(subst_string(source_string, bracket_type, template, replace_all))
 
 
 
