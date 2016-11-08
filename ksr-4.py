@@ -12,7 +12,7 @@ def delete_extra_spaces(source_string):
             
         targer_string = targer_string + word
         double_space = False
-    print(targer_string)
+    return targer_string
 
 
 if __name__ == '__main__':
