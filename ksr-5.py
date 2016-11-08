@@ -10,4 +10,4 @@ def is_polindrom(source_string):
 
 if __name__ == '__main__':
     source_string = ' 1 1 '
-    print (is_polindrom(source_string))
+    is_polindrom(source_string)
